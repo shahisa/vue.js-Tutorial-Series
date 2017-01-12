@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vue.js Tutorial</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+	<div id="app">
+		<h1 :title="title">{{message}}</h1>
+		<img :src="url" :alt="title" :title="title"/>
+	</div>
+	
+
+	<script src="https://unpkg.com/vue@2.1.8/dist/vue.js"></script>
+
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Salam Vue Dunya!',
+				title: 'You loaded the page on ' + new Date(),
+				url: "http://ep.yimg.com/ay/yhst-74742418910237/all-power-to-the-people-t-shirt-3.jpg"
+			}
+		})
+	</script>
+</body>
+</html>
