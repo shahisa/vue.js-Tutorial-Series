@@ -11,6 +11,11 @@
 <body>
 	<div id="app">
 		<h1>{{message}}</h1>
+		<ul>
+			<li v-for=" i in todo">{{i.text}}</li>
+
+
+		</ul>
 	</div>
 	
 
@@ -20,7 +25,12 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
-				message: 'Salam Vue Dunya!'
+				message: 'Salam Vue Dunya!',
+				todo: [
+				{text:"Learn Vue"},
+				{text:"Star my github repo @ shahisa: " + "https://github.com/shahisa/vue.js-Tutorial-Series"},
+				{text:" I will make a Medium post about Vue.js"}
+				]
 			}
 		})
 	</script>
