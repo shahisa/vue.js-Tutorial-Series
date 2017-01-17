@@ -12,8 +12,9 @@
 	<div id="app">
 		<h1>{{message}}</h1>
 		<ul>
-			<li v-for=" i in todo">{{i.text}}</li>
-
+			<li style="list-style-type:none;" v-for=" i in todo">{{i.id}}) {{i.text}}</li>
+			<li v-for= "count in count">make more todos</li>
+			<li v-for= "count in count">item #{{count}}</li>
 
 		</ul>
 	</div>
@@ -27,10 +28,11 @@
 			data: {
 				message: 'Salam Vue Dunya!',
 				todo: [
-				{text:"Learn Vue"},
-				{text:"Star my github repo @ shahisa: " + "https://github.com/shahisa/vue.js-Tutorial-Series"},
-				{text:" I will make a Medium post about Vue.js"}
-				]
+				{text:"Learn Vue", id: 1},
+				{text:"Star my github repo @ shahisa: " + "https://github.com/shahisa/vue.js-Tutorial-Series", id: 2},
+				{text:" I will make a Medium post about Vue.js", id: 3}
+				],
+				count: 10
 			}
 		})
 	</script>
